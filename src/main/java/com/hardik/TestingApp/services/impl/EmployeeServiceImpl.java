@@ -55,7 +55,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         Employee employee = employeeRepository.findById(id)
                 .orElseThrow(() -> {
                     log.error("Employee not found with id: {}", id);
-                    return new ResourceNotFoundException("Employee not found with id: " + id);
+                    return new  ResourceNotFoundException("Employee not found with id: " + id);
                 });
 
         if (!employee.getEmail().equals(employeeDto.getEmail())) {
