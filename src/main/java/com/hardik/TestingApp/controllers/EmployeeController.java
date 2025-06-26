@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/employees")
 @RequiredArgsConstructor
 public class EmployeeController {
-
     private final EmployeeService employeeService;
 
     @GetMapping("/{id}")
